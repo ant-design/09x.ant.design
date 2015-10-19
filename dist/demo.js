@@ -126,7 +126,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	InstantClickChangeFns.push(function () {
 	  var versionsHistory = {
-	    '0.9.1': 'http://09x.ant.design'
+	    '0.9.1': '09x.ant.design'
 	  };
 	  versionsHistory[antdVersion.latest] = versionsHistory[antdVersion.latest] || 'http://ant.design';
 	  var versions = Object.keys(versionsHistory).sort(function (a, b) {
@@ -136,13 +136,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var link = versionsHistory[version];
 	    return React.createElement(
 	      'option',
-	      { value: version },
+	      { key: version, value: version },
 	      version
 	    );
 	  });
 	  function onChange(e) {
 	    if (versionsHistory[e.target.value]) {
-	      location.href = versionsHistory[e.target.value];
+	      location.href = location.href.replace(location.host, versionsHistory[e.target.value]);
 	    }
 	  }
 	  React.render(React.createElement(

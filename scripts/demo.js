@@ -51,7 +51,7 @@ InstantClickChangeFns.push(function () {
 
 InstantClickChangeFns.push(function () {
   var versionsHistory = {
-    '0.9.1': 'http://09x.ant.design'
+    '0.9.1': '09x.ant.design'
   };
   versionsHistory[antdVersion.latest] =
     versionsHistory[antdVersion.latest] || 'http://ant.design';
@@ -60,11 +60,11 @@ InstantClickChangeFns.push(function () {
   });
   var options = versions.map(function(version) {
     var link = versionsHistory[version];
-    return <option value={version}>{version}</option>;
+    return <option key={version} value={version}>{version}</option>;
   });
   function onChange(e) {
     if (versionsHistory[e.target.value]) {
-      location.href = versionsHistory[e.target.value];
+      location.href = location.href.replace(location.host, versionsHistory[e.target.value]);
     }
   }
   React.render(<select defaultValue={antdVersion.latest} onChange={onChange}>{options}</select>, document.getElementById('versions-select'));

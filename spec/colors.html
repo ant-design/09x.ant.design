@@ -401,7 +401,7 @@ var Palette = React.createClass({
         "div",
         { className: "main-color" },
         color.colors.map(function (color) {
-          return React.createElement("div", { style: { backgroundColor: color } });
+          return React.createElement("div", { key: color, style: { backgroundColor: color } });
         })
       ),
       React.createElement(
@@ -469,8 +469,8 @@ var ExtendPalettes = React.createClass({
     return React.createElement(
       "div",
       null,
-      colors.map(function (color) {
-        return React.createElement(Palette, { color: color });
+      colors.map(function (color, i) {
+        return React.createElement(Palette, { key: i, color: color });
       })
     );
   }
