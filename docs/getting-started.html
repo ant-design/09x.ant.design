@@ -584,7 +584,7 @@
 $ antd init
 $ npm install</code></pre></div><h3 id="3-使用组件">3. 使用组件</h3>
 <p>修改 <code>package.json</code> 的 entry 为 <code>"index": "./index.js"</code>。</p>
-<p>编辑 <code>index.js</code>，使用 Ant Design React 的组件。</p>
+<p>在目录下建立和编辑 <code>index.js</code>，使用 Ant Design React 的组件。</p>
 <div class="highlight"><pre><code class="javascript">import React from <span class="string">'react'</span>;
 import { Datepicker, message } from <span class="string">'antd'</span>;
 
@@ -612,8 +612,7 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">App</sp
 <p><code>var Datepicker = require(&#39;antd/lib/datepicker&#39;)</code> 单独引入需要的组件文件可以有效减少最终构建文件的大小。</p>
 <p><code>lib</code> 即构建后的 <code>components</code> 目录。</p>
 </blockquote>
-<p>然后建一个页面用于开发。</p>
-<div class="highlight"><pre><code class="bash">$ touch index.html</code></pre></div><p>编辑 <code>index.html</code> 如下：</p>
+<p>然后建一个页面 index.html 用于开发，编辑如下：</p>
 <div class="highlight"><pre><code class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
 <span class="tag">&lt;<span class="title">html</span>&gt;</span>
   <span class="tag">&lt;<span class="title">head</span>&gt;</span>
@@ -638,7 +637,7 @@ React.render(<span class="xml"><span class="tag">&lt;<span class="title">App</sp
   <span class="tag">&lt;<span class="title">head</span>&gt;</span>
     <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span>
     <span class="comment">&lt;!-- 引入样式 --&gt;</span>
-    <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"http://ant.design/dist/antd.css"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"/index.css"</span>&gt;</span>
     <span class="comment">&lt;!-- Polyfills --&gt;</span>
     <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"https://a.alipayobjects.com/??es5-shim/4.1.10/es5-shim.min.js,es5-shim/4.1.10/es5-sham.min.js,html5shiv/3.7.2/src/html5shiv.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
     <span class="comment">&lt;!-- 引入 jquery 和 react --&gt;</span>
