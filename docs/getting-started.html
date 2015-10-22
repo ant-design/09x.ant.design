@@ -578,11 +578,13 @@
 <span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></pre></div><p>你可以在 <a href="/components/button/">这里</a> 选用更多组件。</p>
 <h2 id="标准项目">标准项目</h2><p>实际项目开发中，你会需要 CommonJS 、JSX 构建、打包部署等一系列工程化的需求。
 提供了一套 <code>npm</code> + <code>webpack</code> 的开发工具链来辅助开发，下面我们用一个简单的实例来说明。</p>
-<h3 id="1-安装命令行工具">1. 安装命令行工具</h3><div class="highlight"><pre><code class="bash">$ npm install antd-bin -g</code></pre></div><p><a href="https://github.com/ant-design/antd-bin#使用说明">更多使用说明</a>。</p>
+<h3 id="1-安装命令行工具">1. 安装命令行工具</h3><div class="highlight"><pre><code class="bash">$ npm install antd-bin@0.6.x -g</code></pre></div><p><a href="https://github.com/ant-design/antd-bin#使用说明">更多使用说明</a>。</p>
 <h3 id="2-创建一个项目">2. 创建一个项目</h3><p>使用命令行进行初始化。</p>
 <div class="highlight"><pre><code class="bash">$ mkdir antd-demo &amp;&amp; <span class="built_in">cd</span> antd-demo
 $ antd init
-$ npm install</code></pre></div><h3 id="3-使用组件">3. 使用组件</h3><p>编辑 <code>index.js</code>，使用 Ant Design React 的组件：</p>
+$ npm install</code></pre></div><h3 id="3-使用组件">3. 使用组件</h3>
+<p>修改 <code>package.json</code> 的 entry 为 <code>"index": "./index.js"</code>。</p>
+<p>编辑 <code>index.js</code>，使用 Ant Design React 的组件。</p>
 <div class="highlight"><pre><code class="javascript">import React from <span class="string">'react'</span>;
 import { Datepicker, message } from <span class="string">'antd'</span>;
 
