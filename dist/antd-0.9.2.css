@@ -5793,6 +5793,7 @@ tr.ant-table-expanded-row:hover {
   background-color: #373737;
   border-radius: 6px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
+  min-height: 34px;
 }
 .ant-tooltip-arrow {
   position: absolute;
@@ -9483,4 +9484,4 @@ a .ant-badge-count:active {
   min-height: 48px;
 }
 
-/*# sourceMappingURL=antd-0.9.1.css.map*/
+/*# sourceMappingURL=antd-0.9.2.css.map*/
